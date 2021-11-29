@@ -10,36 +10,84 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/style.css" />
     <title>Vanilla JavaScript Weather App - Dec 2021</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container app-container">
       <main>
-        <h1>Perth, WA, Australia</h1>
-        <h3>Monday 22:00<br />Partly Cloudy</h3>
-        <h2>19°C | °F</h2>
-        <ul>
-          <li>Precipitation: 0%</li>
-          <li>Humidity: 77%</li>
-          <li>Wind: 8 km/h</li>
-        </ul>
+        <div class="row">
+          <div class="col-12">
+            <h1>Perth, WA, Australia</h1>
+            <h2>Monday 22:00</h2>
+            <h3>Partly Cloudy</h3>
+          </div>
+        </div>
       </main>
       <section>
-        <p>Mon</p>
-        <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
-        <p>24° 13°</p>
+        <div class="row">
+          <div class="col-6">
+            <p>
+              <span class="large-temperature">19</span
+              ><span class="metrics-position">°C | <a href="#">°F</a></span>
+            </p>
+          </div>
+          <div class="col-6">
+            <p>
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: 77%</li>
+              <li>Wind: 8 km/h</li>
+            </ul>
+            </p>
+          </div>
+        </div>
       </section>
-      <footer>
-        <p>
-          <a
-            href="https://github.com/sannepetersvirtualgraphicdesigner/vanilla-js-weather-app-122021"
-            target="_blank"
-            >Open-sourced</a
-          >
-          by Sanne Peters
-        </p>
-      </footer>
+      <section>
+        <div class="row forecast-list">
+          <div class="col-2">
+            <p>Mon</p>
+            <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
+            <p><strong>24°</strong> 13°</p>
+          </div>
+          <div class="col-2">
+            <p>Tue</p>
+            <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
+            <p><strong>24°</strong> 13°</p>
+          </div>
+          <div class="col-2">
+            <p>Wed</p>
+            <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
+            <p><strong>24°</strong> 13°</p>
+          </div>
+          <div class="col-2">
+            <p>Thu</p>
+            <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
+            <p><strong>24°</strong> 13°</p>
+          </div>
+          <div class="col-2">
+            <p>Fri</p>
+            <img src="/images/partly_cloudy.png" alt="Partly Cloudy" />
+            <p><strong>24°</strong> 13°</p>
+          </div>
+        </div>
+      </section>
     </div>
+    <footer>
+      <p class="credits">
+        <a
+          href="https://github.com/sannepetersvirtualgraphicdesigner/vanilla-js-weather-app-122021"
+          target="_blank"
+          >Open-sourced</a
+        >
+        by Sanne Peters
+      </p>
+    </footer>
   </body>
 </html>

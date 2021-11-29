@@ -1,0 +1,59 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #3c3c3c;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin: 0;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 12px;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+  transition: all 150ms ease-in;
+}
+a:hover {
+  color: #fbbc04;
+}
+.app-container {
+  border: 1px solid #949aa9;
+  border-radius: 4px;
+  margin: 20px auto 10px;
+  padding: 20px 40px;
+}
+.large-temperature {
+  font-size: 60px;
+}
+.metrics-position {
+  position: relative;
+  top: -32px;
+  left: 10px;
+}
+.forecast-list {
+  padding: 20px 0 10px;
+}
+.forecast-list p {
+  text-align: center;
+  margin: 5px 0 0;
+}
+.credits {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
