@@ -17,7 +17,6 @@ h2 {
 h3 {
   font-size: 16px;
 }
-
 ul {
   margin: 12px;
   padding: 0;
@@ -36,6 +35,7 @@ a:hover {
   border-radius: 4px;
   margin: 20px auto 10px;
   padding: 20px 40px;
+  max-width: 650px;
 }
 .large-temperature {
   font-size: 60px;
