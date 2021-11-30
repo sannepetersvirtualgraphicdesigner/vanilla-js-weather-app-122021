@@ -26,6 +26,7 @@ a {
   color: #3c3c3c;
   text-decoration: none;
   transition: all 150ms ease-in;
+  font-weight: bold;
 }
 a:hover {
   color: #fbbc04;
@@ -36,6 +37,14 @@ a:hover {
   margin: 20px auto 10px;
   padding: 20px 40px;
   max-width: 650px;
+}
+.weather-icon {
+  margin-top: 10px;
+  float: left;
+  width: 70px;
+}
+.float-left {
+  float: left;
 }
 .large-temperature {
   font-size: 60px;
