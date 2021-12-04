@@ -23,12 +23,10 @@ let weather = {
 
 let city = prompt(`Enter a city`);
 
-// if (city == `${weather.city}`) {
-//   alert(
-//     `It is currently ${weather[0].temp}°C (66°F) in ${weather[0]} with a humidity of ${weather[0].humidity}%`
-//   );
-// } else {
-//   alert(
-//     `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+sydney`
-//   );
-// }
+if (condition) {
+  alert(`test`);
+} else {
+  alert(
+    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+sydney`
+  );
+}
