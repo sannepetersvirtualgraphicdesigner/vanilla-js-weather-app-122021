@@ -22,11 +22,19 @@ let weather = {
 };
 
 let city = prompt(`Enter a city`);
+city = city.toLowerCase();
 
-if (condition) {
-  alert(`test`);
+if (weather[city] !== undefined) {
+  let temperature = weather[city].temp;
+  let celsiusTemp = Math.round(temperature);
+  let fahrenheitTemp = Math.round((temperature * 9) / 5 + 32);
+  let humidity = weather[city].humidity;
+
+  alert(
+    `It is currently ${celsiusTemp}°C (${fahrenheitTemp}°F) in ${city} with a humidity of ${humidity}%`
+  );
 } else {
   alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+sydney`
+    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
   );
 }
