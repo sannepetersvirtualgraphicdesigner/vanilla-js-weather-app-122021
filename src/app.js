@@ -21,7 +21,7 @@ let weather = {
   },
 };
 
-let city = prompt(`Enter a city`);
+let city = console.log(`Enter a city`);
 city = city.toLowerCase();
 
 if (weather[city] !== undefined) {
