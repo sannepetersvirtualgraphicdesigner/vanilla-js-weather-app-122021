@@ -1,19 +1,29 @@
-let currentTime = new Date();
-let currentHours = currentTime.getHours();
-let currentMinutes = currentTime.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDay = days[currentTime.getDay()];
+function formatDate(date) {
+  let currentHours = date.getHours();
+  if (currentHours < 10) {
+    currentHours = `0${currentHours}`;
+  }
+  let currentMinutes = date.getMinutes();
+  if (currentMinutes < 10) {
+    currentMinutes = `0${currentMinutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[date.getDay()];
 
+  return `${currentDay} ${currentHours}:${currentMinutes}`;
+}
+
+let currentTime = new Date();
 let dateElement = document.querySelector("#date");
-dateElement.innerHTML = `${currentDay} ${currentHours}:${currentMinutes}`;
+dateElement.innerHTML = formatDate(currentTime);
 
 // let weather = {
 //   paris: {
