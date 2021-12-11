@@ -4,7 +4,10 @@
 
 function search(event) {
   event.preventDefault();
-  alert(`Test`);
+  let cityInput = document.querySelector("#city-input");
+  cityInput = cityInput.value;
+  let citySearch = document.querySelector("#city");
+  citySearch.innerHTML = `${cityInput}`;
 }
 
 let searchForm = document.querySelector("#search-form");
