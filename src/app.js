@@ -43,57 +43,26 @@ dateElement.innerHTML = formatDate(currentTime);
 //convert celsius to fahrenheit
 //start with grabbing the element
 //create converToFahrenheit function
-//grab the temp element
-function converToFahrenheit(event) {
+//grab the temp element and create a var to change the celsius to fahrenheit using the formula
+//then convert the string to a number - just in case
+//create a celsius function
+function convertToFahrenheit(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temperature");
   let temperature = tempElement.innerHTML;
-  console.log(temperature);
+  temperature = Number(temperature);
+  tempElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  // tempElement.innerHTML = 66;
+}
+function convertToCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  let temperature = tempElement.innerHTML;
+  temperature = Number(temperature);
+  tempElement.innerHTML = Math.round((temperature - 30) / 1.8);
+  // tempElement.innerHTML = 19;
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener = ("click", converToFahrenheit);
-
-// let currentTime = new Date();
-// let dateElement = document.querySelector("#date");
-// dateElement.innerHTML = formatDate(currentTime);
-
-// let weather = {
-//   paris: {
-//     temp: 19.7,
-//     humidity: 80,
-//   },
-//   tokyo: {
-//     temp: 17.3,
-//     humidity: 50,
-//   },
-//   lisbon: {
-//     temp: 30.2,
-//     humidity: 20,
-//   },
-//   "san francisco": {
-//     temp: 20.9,
-//     humidity: 100,
-//   },
-//   moscow: {
-//     temp: -5,
-//     humidity: 20,
-//   },
-// };
-
-// let city = console.log(`Enter a city`);
-// city = city.toLowerCase();
-
-// if (weather[city] !== undefined) {
-//   let temperature = weather[city].temp;
-//   let celsiusTemp = Math.round(temperature);
-//   let fahrenheitTemp = Math.round((temperature * 9) / 5 + 32);
-//   let humidity = weather[city].humidity;
-
-//   alert(
-//     `It is currently ${celsiusTemp}°C (${fahrenheitTemp}°F) in ${city} with a humidity of ${humidity}%`
-//   );
-// } else {
-//   alert(
-//     `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-//   );
-// }
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
