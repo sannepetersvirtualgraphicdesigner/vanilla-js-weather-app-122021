@@ -4,14 +4,11 @@
 
 function search(event) {
   event.preventDefault();
+  let citySearch = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
   cityInput = cityInput.value;
-  let citySearch = document.querySelector("#city");
   citySearch.innerHTML = `${cityInput}`;
 }
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
 
 function formatDate(date) {
   let currentHours = date.getHours();
@@ -36,9 +33,25 @@ function formatDate(date) {
   return `${currentDay}, ${currentHours}:${currentMinutes}`;
 }
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
 let currentTime = new Date();
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(currentTime);
+
+//convert celsius to fahrenheit
+//start with grabbing the element
+//create converToFahrenheit function
+//grab the temp element
+function converToFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  let temperature = tempElement.innerHTML;
+  console.log(temperature);
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener = ("click", converToFahrenheit);
 
 // let currentTime = new Date();
 // let dateElement = document.querySelector("#date");
