@@ -1,3 +1,15 @@
+//Add search engine, when searching for a city (eg Paris), alert city
+//first create searchfunction; using form id (search-form)
+//then get the value of the input; using input id (city-input)
+
+function search(event) {
+  event.preventDefault();
+  alert(`Test`);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
 function formatDate(date) {
   let currentHours = date.getHours();
   if (currentHours < 10) {
@@ -18,12 +30,16 @@ function formatDate(date) {
   ];
   let currentDay = days[date.getDay()];
 
-  return `${currentDay} ${currentHours}:${currentMinutes}`;
+  return `${currentDay}, ${currentHours}:${currentMinutes}`;
 }
 
 let currentTime = new Date();
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(currentTime);
+
+// let currentTime = new Date();
+// let dateElement = document.querySelector("#date");
+// dateElement.innerHTML = formatDate(currentTime);
 
 // let weather = {
 //   paris: {

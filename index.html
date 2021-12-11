@@ -22,26 +22,43 @@
   <body>
     <div class="container app-container">
       <section>
-        <!-- <form>
-          <input type="text" placeholder="Type a city..." />
-          <input type="button" value="Search" />
-        </form> -->
-        <div class="input-group mb-3">
+        <form class="input-group mb-3" id="search-form">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Type a city..."
+            autofocus="on"
+            autocomplete="off"
+            id="search-city-value"
+          />
+          <input
+            class="btn btn-outline-secondary"
+            type="submit"
+            value="Search"
+            id="search-city-button"
+          />
+        </form>
+        <!-- <div class="input-group mb-3">
           <input
             type="text"
             class="form-control"
             placeholder="Type a city..."
+            id="input-group-value"
           />
-          <button class="btn btn-outline-secondary" type="button">
+          <button
+            class="btn btn-outline-secondary"
+            type="submit"
+            id="search-city-button"
+          >
             Search
           </button>
-        </div>
+        </div> -->
       </section>
       <main>
         <div class="row">
           <div class="col-12">
-            <h1>Perth, WA, Australia</h1>
-            <h2 id="date">Monday 22:00</h2>
+            <h1 id="city">Perth, Australia</h1>
+            <h2 id="date"></h2>
             <h3>Partly Cloudy</h3>
           </div>
         </div>
